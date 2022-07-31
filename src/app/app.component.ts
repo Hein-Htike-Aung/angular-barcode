@@ -10,10 +10,10 @@ import * as JsBarcode from 'jsbarcode';
 export class AppComponent {
 
   barcode = '';
+  scannedBarcode = '';
+  code = '';
 
   form: FormGroup;
-
-  title = 'barcode';
 
   constructor(private builder: FormBuilder) {
     this.form = this.builder.group({
@@ -23,24 +23,33 @@ export class AppComponent {
   }
 
   generateBarCode() {
-    JsBarcode('#barcode', JSON.stringify(this.form.get('input').value), {
+    JsBarcode('#barcode', this.form.get('input').value, {
       format: this.form.get('type').value,
       displayValue: true,
       lineColor: 'black',
-      width:1,
-      height: 40,
-      fontSize: 20,
+      width: 1,
+      fontOptions: 'bold',
+      height: 60,
+      fontSize: 15,
     });
   }
 
   printCode() {
-    var divContents = document.getElementById("barcodeprint").innerHTML;
-    var a = window.open('', '', '');
-    a.document.write('<html>');
-    a.document.write('<body > <h3>Bar code is </h3>');
+    const divContents = document.getElementById("barcodeprint").innerHTML;
+    const a = window.open('', '', '');
     a.document.write(divContents);
-    a.document.write('</body></html>');
     a.document.close();
     a.print();
   }
+
+  onKey(e: any) {
+    if (e.key === 'Enter') {
+      if (this.code) this.scannedBarcode = this.code;
+      this.code = '';
+      return;
+    }
+
+    else this.code += e.key;
+  }
 }
+

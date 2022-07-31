@@ -10,6 +10,7 @@
       <option value="codabar">Codabar</option>
       <option value="code39">Code 39</option>
       <option value="msi">MSI</option>
+      <option value="upc">UPC</option>
       <option value="pharmacode">Pharmacode</option>
     </select>
   </div>
@@ -19,8 +20,11 @@
     <button (click)="printCode()">Print</button>
   </div>
 
-
   <div id="barcodeprint" style="margin: 30px">
     <svg id="barcode"></svg>
   </div>
 </form>
+<div>
+  <input type="text" hidden (window:keypress)="onKey($event)" autofocus />
+  <p>Scanned barcode: {{ scannedBarcode }}</p>
+</div>
