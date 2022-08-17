@@ -1,0 +1,6 @@
+#barcodeprint {
+  display: flex;
+  gap: 70px;
+  padding: 20px;
+  padding-left: 130px;
+}
