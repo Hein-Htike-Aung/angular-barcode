@@ -1,6 +1,13 @@
 #barcodeprint {
   display: flex;
-  gap: 70px;
+  gap: 130px;
   padding: 20px;
-  padding-left: 130px;
+  padding-left: 120px;
+}
+
+#qrcodeprint {
+  display: flex;
+  gap: 130px;
+  padding: 0 20px;
+  padding-left: 120px;
 }

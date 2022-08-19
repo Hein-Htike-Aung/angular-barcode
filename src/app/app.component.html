@@ -16,14 +16,39 @@
   </div>
 
   <div style="margin-bottom: 10px">
-    <button (click)="generateBarCode()">Generate</button>
-    <button (click)="printCode()">Print</button>
+    <button (click)="generateBarCode()">GenerateBarcode</button>
+    <button (click)="printBarCode()">Print Barcode</button>
+    <button (click)="printQrCode()">Print Qrcode</button>
   </div>
 
   <div id="barcodeprint">
     <svg id="barcode"></svg>
     <svg id="barcode"></svg>
     <svg id="barcode"></svg>
+  </div>
+
+  <div id="qrcodeprint">
+    <qrcode
+      #parent
+      [qrdata]="form.get('input').value"
+      [allowEmptyString]="true"
+      [width]="200"
+      [errorCorrectionLevel]="'M'"
+    ></qrcode>
+    <qrcode
+      #parent
+      [allowEmptyString]="true"
+      [qrdata]="form.get('input').value"
+      [width]="200"
+      [errorCorrectionLevel]="'M'"
+    ></qrcode>
+    <qrcode
+      #parent
+      [qrdata]="form.get('input').value"
+      [allowEmptyString]="true"
+      [width]="200"
+      [errorCorrectionLevel]="'M'"
+    ></qrcode>
   </div>
 </form>
 <div>
