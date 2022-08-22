@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import * as JsBarcode from 'jsbarcode';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { QRCode } from 'qrcode';
 
 @Component({
   selector: 'app-root',
@@ -67,7 +68,7 @@ export class AppComponent {
         orientation: 'l',
         unit: 'ex',
         // height, width
-        format: [30, 160],
+        format: [10, 140],
       });
 
       const imgWidth = 208;
@@ -85,5 +86,9 @@ export class AppComponent {
       this.code = '';
       return;
     } else this.code += e.key;
+  }
+
+  get qrcodeValue(): string {
+    return this.form.get('input').value;
   }
 }

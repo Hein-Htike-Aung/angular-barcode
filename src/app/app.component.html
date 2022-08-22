@@ -28,27 +28,33 @@
   </div>
 
   <div id="qrcodeprint">
-    <qrcode
-      #parent
-      [qrdata]="form.get('input').value"
-      [allowEmptyString]="true"
-      [width]="200"
-      [errorCorrectionLevel]="'M'"
-    ></qrcode>
-    <qrcode
-      #parent
-      [allowEmptyString]="true"
-      [qrdata]="form.get('input').value"
-      [width]="200"
-      [errorCorrectionLevel]="'M'"
-    ></qrcode>
-    <qrcode
-      #parent
-      [qrdata]="form.get('input').value"
-      [allowEmptyString]="true"
-      [width]="200"
-      [errorCorrectionLevel]="'M'"
-    ></qrcode>
+    <div class="item">
+      <qrcode
+        [qrdata]="qrcodeValue"
+        [allowEmptyString]="true"
+        [width]="70"
+        [errorCorrectionLevel]="'M'"
+      ></qrcode>
+      <span class="qrText">{{ qrcodeValue }}</span>
+    </div>
+    <div class="item">
+      <qrcode
+        [qrdata]="qrcodeValue"
+        [allowEmptyString]="true"
+        [width]="70"
+        [errorCorrectionLevel]="'M'"
+      ></qrcode>
+      <span class="qrText">{{ qrcodeValue }}</span>
+    </div>
+    <div class="item">
+      <qrcode
+        [qrdata]="qrcodeValue"
+        [allowEmptyString]="true"
+        [width]="70"
+        [errorCorrectionLevel]="'M'"
+      ></qrcode>
+      <span class="qrText">{{ qrcodeValue }}</span>
+    </div>
   </div>
 </form>
 <div>

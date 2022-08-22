@@ -5,9 +5,18 @@
   padding-left: 120px;
 }
 
+.item {
+  display: flex;
+  align-items: center;
+}
+
+.qrText {
+  font-size: 30px;
+}
+
 #qrcodeprint {
   display: flex;
-  gap: 130px;
+  gap: 30px;
   padding: 0 20px;
-  padding-left: 120px;
+  padding-left: 30px;
 }
