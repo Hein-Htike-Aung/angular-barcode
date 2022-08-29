@@ -11,12 +11,14 @@
 }
 
 .qrText {
-  font-size: 30px;
+  font-size: 18px;
+  width: 100px;
 }
 
 #qrcodeprint {
   display: flex;
-  gap: 30px;
-  padding: 0 20px;
-  padding-left: 30px;
+  gap: 34px;
+  padding: 0 25px;
+  padding-top: 13px;
+  padding-left: 51px;
 }

@@ -68,7 +68,7 @@ export class AppComponent {
         orientation: 'l',
         unit: 'ex',
         // height, width
-        format: [10, 140],
+        format: [17, 110],
       });
 
       const imgWidth = 208;

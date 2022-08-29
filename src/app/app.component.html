@@ -26,13 +26,22 @@
     <svg id="barcode"></svg>
     <svg id="barcode"></svg>
   </div>
-
+  
   <div id="qrcodeprint">
     <div class="item">
       <qrcode
         [qrdata]="qrcodeValue"
         [allowEmptyString]="true"
-        [width]="70"
+        [errorCorrectionLevel]="'M'"
+        [width]="120"
+      ></qrcode>
+      <span class="qrText">{{ qrcodeValue }}</span>
+    </div>
+    <div class="item">
+      <qrcode
+        [qrdata]="qrcodeValue"
+        [allowEmptyString]="true"
+        [width]="120"
         [errorCorrectionLevel]="'M'"
       ></qrcode>
       <span class="qrText">{{ qrcodeValue }}</span>
@@ -41,16 +50,7 @@
       <qrcode
         [qrdata]="qrcodeValue"
         [allowEmptyString]="true"
-        [width]="70"
-        [errorCorrectionLevel]="'M'"
-      ></qrcode>
-      <span class="qrText">{{ qrcodeValue }}</span>
-    </div>
-    <div class="item">
-      <qrcode
-        [qrdata]="qrcodeValue"
-        [allowEmptyString]="true"
-        [width]="70"
+        [width]="120"
         [errorCorrectionLevel]="'M'"
       ></qrcode>
       <span class="qrText">{{ qrcodeValue }}</span>
