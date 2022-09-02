@@ -58,6 +58,6 @@
   </div>
 </form>
 <div>
-  <input type="text" hidden (window:keypress)="onKey($event)" autofocus />
-  <p>Scanned barcode: {{ scannedBarcode }}</p>
+  <input type="text" (window:keypress)="onKey($event)" autofocus />
+  <!-- <p>Scanned barcode: {{ scannedBarcode }}</p> -->
 </div>

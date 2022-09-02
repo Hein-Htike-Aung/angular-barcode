@@ -81,11 +81,19 @@ export class AppComponent {
   }
 
   onKey(e: any) {
-    if (e.key === 'Enter') {
-      if (this.code) this.scannedBarcode = this.code;
-      this.code = '';
-      return;
-    } else this.code += e.key;
+    // if (e.key === 'Enter') {
+    //   if (this.code) this.scannedBarcode = this.code;
+    //   this.code = '';
+    //   return;
+    // } else this.code += e.key;
+
+    // this.code += e.key;
+
+    // console.log(this.code.length)
+
+    // if (this.code.length === 15) {
+    //   console.log(this.code);
+    // }
   }
 
   get qrcodeValue(): string {
